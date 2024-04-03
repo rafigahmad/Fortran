@@ -1,11 +1,19 @@
 # Fortran
-The first professional programming language
-The first programming language is often debated among historians and experts in computer science. However, one of the earliest high-level programming languages designed for electronic computers is Fortran (short for "Formula Translation").
+program Factorial
+    implicit none
+    integer :: n, factorial
 
-Fortran was developed by IBM in the 1950s for scientific and engineering calculations. It was specifically created to simplify mathematical computations and improve programming productivity. Fortran introduced many innovations, including the use of English-like syntax, subroutines, and array processing.
+    ! Ask user for input
+    print *, "Enter a number to calculate its factorial:"
+    read *, n
 
-The development of Fortran marked a significant milestone in the history of programming languages, enabling programmers to write complex mathematical algorithms more easily and efficiently than using machine code or assembly language.
+    ! Calculate factorial using a loop
+    factorial = 1
+    do while (n > 0)
+        factorial = factorial * n
+        n = n - 1
+    end do
 
-Since then, numerous programming languages have been developed, each with features, syntax, and use cases. Some other early programming languages include Assembly language, Lisp, COBOL, and ALGOL.
-
-It's important to note that the concept of programming languages and software development has evolved significantly over time, with newer languages continuously being developed to address emerging technologies and programming paradigms.
+    ! Display the factorial
+    print *, "Factorial:", factorial
+end program Factorial
